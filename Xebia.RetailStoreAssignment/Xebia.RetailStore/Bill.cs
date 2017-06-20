@@ -10,7 +10,7 @@ namespace Xebia.RetailStore
     {
         public DateTime BillDate { get; set; }
 
-        public User Customer { get; set; }
+        public IUser User { get; set; }
 
         public Order OrderDetails { get; set; }
     }

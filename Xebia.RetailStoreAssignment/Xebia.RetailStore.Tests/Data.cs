@@ -14,7 +14,7 @@ namespace Xebia.RetailStore.Tests
             private set;
         }
 
-        public static List<User> Users
+        public static List<IUser> Users
         {
             get;
             private set;
@@ -155,57 +155,43 @@ namespace Xebia.RetailStore.Tests
             return productsCat;
         }
 
-        private static List<User> Getusers()
+        private static List<IUser> Getusers()
         {
-            var users = new List<User>
+            var users = new List<IUser>
             {
-                new User
+                new Employee
                 {
                     Name = "U1",
-                    IsEmployee = true,
-                    IsAffiliate = true,
                     JoiningDate = DateTime.UtcNow.AddMonths(-12)
                 },
-                new User
+                new Affiliate
                 {
                     Name = "U2",
-                    IsEmployee = false,
-                    IsAffiliate = true,
                     JoiningDate = DateTime.UtcNow.AddMonths(-18)
                 },
-                new User
+                new Customer
                 {
                     Name = "U3",
-                    IsEmployee = false,
-                    IsAffiliate = false,
                     JoiningDate = DateTime.UtcNow.AddMonths(-12)
                 },
-                new User
+                new Customer
                 {
                     Name = "U4",
-                    IsEmployee = false,
-                    IsAffiliate = false,
                     JoiningDate = DateTime.UtcNow.AddMonths(-24)
                 },
-                new User
+                new Customer
                 {
                     Name = "U5",
-                    IsEmployee = false,
-                    IsAffiliate = false,
                     JoiningDate = DateTime.UtcNow.AddMonths(-24).AddDays(-1)
                 },
-                new User
+                new Customer
                 {
                     Name = "U6",
-                    IsEmployee = false,
-                    IsAffiliate = false,
                     JoiningDate = DateTime.UtcNow.AddMonths(-24).AddDays(1)
                 },
-                new User
+                new Customer
                 {
                     Name = "U7",
-                    IsEmployee = false,
-                    IsAffiliate = false,
                     JoiningDate = DateTime.UtcNow.AddYears(-3)
                 }
             };

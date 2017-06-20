@@ -14,7 +14,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[0],
+                User = Data.Users[0],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -28,7 +28,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 390);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 390);
         }
 
         [Fact]
@@ -36,7 +36,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[0],
+                User = Data.Users[0],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -47,7 +47,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -55,7 +55,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[0],
+                User = Data.Users[0],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -67,7 +67,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 200);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 200);
         }
 
         [Fact]
@@ -75,7 +75,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[1],
+                User = Data.Users[1],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -89,7 +89,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 450);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 450);
         }
 
         [Fact]
@@ -97,7 +97,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[1],
+                User = Data.Users[1],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -108,7 +108,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -116,7 +116,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[1],
+                User = Data.Users[1],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -128,7 +128,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 260);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 260);
         }
 
         [Fact]
@@ -136,7 +136,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[2],
+                User = Data.Users[2],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -150,7 +150,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 475);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 475);
         }
 
         [Fact]
@@ -158,7 +158,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[2],
+                User = Data.Users[2],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -169,7 +169,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -177,7 +177,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[2],
+                User = Data.Users[2],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -189,7 +189,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 285);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 285);
         }
 
         [Fact]
@@ -197,7 +197,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[5],
+                User = Data.Users[5],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -211,7 +211,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 475);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 475);
         }
 
         [Fact]
@@ -219,7 +219,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[5],
+                User = Data.Users[5],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -230,7 +230,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -238,7 +238,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[5],
+                User = Data.Users[5],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -250,7 +250,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 285);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 285);
         }
 
         [Fact]
@@ -258,7 +258,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[6],
+                User = Data.Users[6],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -272,7 +272,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 465);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 465);
         }
 
         [Fact]
@@ -280,7 +280,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[6],
+                User = Data.Users[6],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -291,7 +291,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -299,7 +299,7 @@ namespace Xebia.RetailStore.Tests
         {
             var bill = new Bill
             {
-                Customer = Data.Users[6],
+                User = Data.Users[6],
                 OrderDetails = new Order
                 {
                     OrderItems = new List<Product>
@@ -311,7 +311,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 275);
+            Assert.Equal(new BillCalculator().CalculateNetPayable(bill), 275);
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Xebia.RetailStore
 {
-    public static class BillCalculator
+    public class BillCalculator
     {
-        private static BillAmount AmountBeforeAnyDiscount(Bill bill)
+        private BillAmount AmountBeforeAnyDiscount(Bill bill)
         {
             var amount = new BillAmount();
 
@@ -34,20 +34,20 @@ namespace Xebia.RetailStore
             return amount;
         }
 
-        private static decimal PercentageDiscountAmount(Bill bill, BillAmount amount)
+        private decimal PercentageDiscountAmount(Bill bill, BillAmount amount)
         {
             if (amount.Other.HasValue)
             {
 
-                if (bill.Customer.IsEmployee)
+                if (bill.User.IsEmployee)
                 {
                     return amount.Other.Value * 0.3m;
                 }
-                else if (bill.Customer.IsAffiliate)
+                else if (bill.User.IsAffiliate)
                 {
                     return amount.Other.Value * 0.1m;
                 }
-                else if (DateTime.UtcNow.Date >= bill.Customer.JoiningDate.AddYears(2).ToUniversalTime().Date)
+                else if (DateTime.UtcNow.Date >= bill.User.JoiningDate.AddYears(2).ToUniversalTime().Date)
                 {
                     return amount.Other.Value * 0.05m;
                 }
@@ -58,7 +58,7 @@ namespace Xebia.RetailStore
             return 0;
         }
 
-        private static int FixedDiscountAmount(decimal? total)
+        private int FixedDiscountAmount(decimal? total)
         {
             if (total.HasValue)
             {
@@ -68,7 +68,7 @@ namespace Xebia.RetailStore
             return 0;
         }
 
-        public static decimal? CalculateNetPayable(Bill bill)
+        public decimal? CalculateNetPayable(Bill bill)
         {
             var amountBeforeAnyDiscount = AmountBeforeAnyDiscount(bill);
             var percentageDiscountAmount = PercentageDiscountAmount(bill, amountBeforeAnyDiscount);
@@ -80,7 +80,7 @@ namespace Xebia.RetailStore
         }
     }
 
-    public struct BillAmount
+    public sealed class BillAmount
     {
         public decimal? Grocery { get; set; }
 
