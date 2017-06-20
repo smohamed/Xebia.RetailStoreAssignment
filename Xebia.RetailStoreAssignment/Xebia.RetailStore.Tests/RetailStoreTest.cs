@@ -28,7 +28,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 390);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 390);
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 190);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -67,7 +67,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 200);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 200);
         }
 
         [Fact]
@@ -89,7 +89,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 450);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 450);
         }
 
         [Fact]
@@ -108,7 +108,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 190);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -128,7 +128,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 260);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 260);
         }
 
         [Fact]
@@ -150,7 +150,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 475);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 475);
         }
 
         [Fact]
@@ -169,7 +169,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 190);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -189,7 +189,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 285);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 285);
         }
 
         [Fact]
@@ -211,7 +211,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 475);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 475);
         }
 
         [Fact]
@@ -230,7 +230,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 190);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -250,7 +250,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 285);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 285);
         }
 
         [Fact]
@@ -272,7 +272,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 465);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 465);
         }
 
         [Fact]
@@ -291,7 +291,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 190);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 190);
         }
 
         [Fact]
@@ -311,7 +311,7 @@ namespace Xebia.RetailStore.Tests
                 }
             };
 
-            Assert.Equal(bill.NetPayable, 275);
+            Assert.Equal(BillCalculator.CalculateNetPayable(bill), 275);
         }
     }
 }
