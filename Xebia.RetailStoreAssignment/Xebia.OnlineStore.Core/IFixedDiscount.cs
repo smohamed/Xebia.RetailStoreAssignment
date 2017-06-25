@@ -8,6 +8,9 @@ namespace Xebia.OnlineStore.Core
 {
     public interface IFixedDiscount
     {
+        decimal DiscountAppliedForEach { get; }
+        decimal DiscountValue { get; }
+
         decimal Calculate(decimal billAmount);
     }
 }

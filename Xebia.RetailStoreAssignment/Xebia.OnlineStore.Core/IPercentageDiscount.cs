@@ -8,6 +8,11 @@ namespace Xebia.OnlineStore.Core
 {
     public interface IPercentageDiscount
     {
+        decimal DiscountForEmployee { get; }
+        decimal DiscountForAffiliate { get; }
+        decimal DiscountForCustomer { get; }
+        int CustomerLoyaltyMinimumYears { get; }
+
         decimal Calculate(IOrder order);
     }
 }

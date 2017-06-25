@@ -13,12 +13,38 @@ namespace Xebia.OnlineStore
 
         public static PercentageDiscount Instance => defaultCalc.Value;
 
+        public decimal DiscountForEmployee { get; private set; }
+
+        public decimal DiscountForAffiliate { get; private set; }
+
+        public decimal DiscountForCustomer { get; private set; }
+
+        public int CustomerLoyaltyMinimumYears { get; private set; }
+
         private PercentageDiscount()
-        { }
+        {
+            DiscountForEmployee = 0.3m;
+            DiscountForAffiliate = 0.1m;
+            DiscountForCustomer = 0.05m;
+            CustomerLoyaltyMinimumYears = 2;
+        }
 
         public decimal Calculate(IOrder order)
         {
-            throw new NotImplementedException();
+            if (order.Customer.IsEmployee)
+            {
+                return order.NonGroceriesAmount * DiscountForEmployee;
+            }
+            else if (order.Customer.IsAffiliate)
+            {
+                return order.NonGroceriesAmount * DiscountForAffiliate;
+            }
+            else if (DateTime.UtcNow.Date >= order.Customer.JoiningDate.AddYears(CustomerLoyaltyMinimumYears).ToUniversalTime().Date)
+            {
+                return order.NonGroceriesAmount * DiscountForCustomer;
+            }
+
+            return 0;
         }
     }
 }
