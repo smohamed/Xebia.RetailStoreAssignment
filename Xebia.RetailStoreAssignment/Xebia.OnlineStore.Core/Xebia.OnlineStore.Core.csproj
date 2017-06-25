@@ -40,8 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBill.cs" />
+    <Compile Include="IBillCalculator.cs" />
+    <Compile Include="IBillCalculatorFactory.cs" />
+    <Compile Include="IFixedDiscount.cs" />
     <Compile Include="IOrder.cs" />
     <Compile Include="IOrderItem.cs" />
+    <Compile Include="IPercentageDiscount.cs" />
     <Compile Include="IProduct.cs" />
     <Compile Include="IProductType.cs" />
     <Compile Include="IUser.cs" />

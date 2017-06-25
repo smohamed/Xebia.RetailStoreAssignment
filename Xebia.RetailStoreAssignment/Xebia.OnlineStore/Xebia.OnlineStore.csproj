@@ -41,13 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Affiliate.cs" />
+    <Compile Include="Bill.cs" />
+    <Compile Include="BillCalculator.cs" />
+    <Compile Include="BillCalculatorFactory.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="FixedDiscount.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="Grocery.cs" />
     <Compile Include="NonGrocery.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="OtherProduct.cs" />
+    <Compile Include="PercentageDiscount.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,7 +11,7 @@ namespace Xebia.OnlineStore
     {
         private static readonly Lazy<Grocery> defaultGrocery = new Lazy<Grocery>(() => new Grocery());
 
-        public static Grocery Instance { get { return defaultGrocery.Value; } }
+        public static Grocery Instance => defaultGrocery.Value;
 
         private Grocery() : base("Grocery", true)
         { }
