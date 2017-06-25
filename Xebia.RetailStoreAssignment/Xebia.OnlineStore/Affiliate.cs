@@ -8,7 +8,7 @@ namespace Xebia.OnlineStore
 {
     public sealed class Affiliate : User
     {
-        public Affiliate(string name, DateTime joinDate, string companyName) : base(name, joinDate)
+        public Affiliate(string name, DateTime joinDate, string companyName = null) : base(name, joinDate)
         {
             CompanyName = companyName;
         }

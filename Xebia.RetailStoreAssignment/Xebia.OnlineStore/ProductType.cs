@@ -15,7 +15,7 @@ namespace Xebia.OnlineStore
         public ProductType(string name, bool isGrocery = false)
         {
             Name = name;
-            IsGrocery = IsGrocery;
+            IsGrocery = isGrocery;
         }
 
         public string Name { get; protected set; }

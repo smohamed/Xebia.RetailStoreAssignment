@@ -12,7 +12,7 @@ namespace Xebia.OnlineStore
         private OrderItem()
         { }
 
-        public OrderItem(IProduct product, int saleQuantity)
+        public OrderItem(IProduct product, int saleQuantity = 1)
         {
             Product = product;
             ItemQuantity = saleQuantity;
