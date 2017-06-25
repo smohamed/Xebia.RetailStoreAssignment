@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xebia.OnlineStore.Common;
+using Xebia.OnlineStore.Core;
 
 namespace Xebia.OnlineStore
 {
@@ -12,8 +12,13 @@ namespace Xebia.OnlineStore
     {
         protected List<IOrderItem> orderItems;
 
-        public Order()
+        private Order()
+        { }
+
+        public Order(IUser customer)
         {
+            Customer = customer;
+
             OrderNumber = Guid.NewGuid().ToString();
             OrderDate = DateTime.UtcNow;
 
@@ -43,6 +48,8 @@ namespace Xebia.OnlineStore
                 return this.Where(o => !o.Product.ProductType.IsGrocery).Sum(o => o.TotalPrice);
             }
         }
+
+        public IUser Customer { get; protected set; }
 
         public virtual void AddItem(IOrderItem item)
         {

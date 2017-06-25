@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xebia.OnlineStore.Common;
+using Xebia.OnlineStore.Core;
 
 namespace Xebia.OnlineStore
 {

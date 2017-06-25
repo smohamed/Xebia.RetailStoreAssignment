@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Xebia.OnlineStore.Common
+namespace Xebia.OnlineStore.Core
 {
-    public interface IProductType
+    public interface IUser
     {
         string Name { get; }
-        bool IsGrocery { get; }
+        DateTime JoiningDate { get; }
+        bool IsEmployee { get; }
+        bool IsAffiliate { get; }
     }
 }

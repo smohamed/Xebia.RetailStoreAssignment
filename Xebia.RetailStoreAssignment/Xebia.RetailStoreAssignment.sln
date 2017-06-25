@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xebia.RetailStore", "Xebia.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xebia.RetailStore.Tests", "Xebia.RetailStore.Tests\Xebia.RetailStore.Tests.csproj", "{FE4C093F-5185-4593-8073-9ED36ADBA6EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xebia.OnlineStore.Common", "Xebia.OnlineStore.Common\Xebia.OnlineStore.Common.csproj", "{A89ECD27-74EB-49C6-BB41-FE07BD6CC3DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xebia.OnlineStore.Core", "Xebia.OnlineStore.Core\Xebia.OnlineStore.Core.csproj", "{A89ECD27-74EB-49C6-BB41-FE07BD6CC3DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xebia.OnlineStore", "Xebia.OnlineStore\Xebia.OnlineStore.csproj", "{35F2349F-0964-4482-9FAF-2EF4C23206CA}"
 EndProject

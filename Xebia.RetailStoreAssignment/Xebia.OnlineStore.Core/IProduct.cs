@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Xebia.OnlineStore.Common
+namespace Xebia.OnlineStore.Core
 {
     public interface IProduct
     {
